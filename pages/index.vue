@@ -6,6 +6,10 @@
     <div class="naresh-portfolio-app__main p-2 md:p-8">
       APP
       <Intro />
+      <About />
+      <MyWork />
+      <Experience />
+      <Contact />
     </div>
 
     <div v-if="false" class="naresh-portfolio-app__footer py-8 px-8"></div>
