@@ -1,6 +1,8 @@
 <template>
   <div class="naresh-portfolio-about mt-12 md:mt-32">
-    <div class="naresh-portfolio-about__title title pt-8">About Me!</div>
+    <div class="naresh-portfolio-about__title title pt-4 md:pt-8">
+      About Me!
+    </div>
     <CustomBorder />
     <div class="naresh-portfolio-about__content mt-10">TEMP STUFF</div>
   </div>

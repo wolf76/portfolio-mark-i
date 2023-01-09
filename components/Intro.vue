@@ -5,19 +5,31 @@
     </div>
     <div class="naresh-portfolio-intro__head">
       <div class="naresh-portfolio-intro__head__callout">Hi! I'm</div>
-      <div class="naresh-portfolio-intro__head__name">NARESHKUMAR J S</div>
+      <div class="naresh-portfolio-intro__head__name medium-dev">
+        NARESHKUMAR J<span class="text-white">.</span>S
+      </div>
+      <div class="naresh-portfolio-intro__head__name small-dev">
+        <div class="naresh-portfolio-intro__head__name--small-dev">
+          NARESHKUMAR
+        </div>
+        <div class="naresh-portfolio-intro__head__name--small-dev">
+          J<span class="text-white">.</span>S
+        </div>
+      </div>
       <div class="naresh-portfolio-intro__head__title">FRONTEND DEVELOPER</div>
       <div class="naresh-portfolio-intro__head__desc">
         I'm a Frontend Developer. I create web3 webapps and cool websites.
         Photography is one of my hobbies.
       </div>
     </div>
-    <div class="naresh-portfolio-intro__hero"></div>
+    <div class="naresh-portfolio-intro__hero flex justify-center items-center">
+      <img src="~/assets/images/naresh-hero.jpeg" alt="Naresh" />
+    </div>
   </div>
 </template>
 
 <script>
-import { gsap, Back, Elastic, Expo } from 'gsap'
+import { gsap, Back, Elastic, Expo, Bounce } from 'gsap'
 import CustomMediaIcons from '@/components/commons/CustomMediaIcons.vue'
 
 export default {
@@ -44,20 +56,35 @@ export default {
         },
         0.5
       )
-        .to('.naresh-portfolio-intro__head__name', {
-          fontSize: '3rem',
-          duration: 0.5,
-          stagger: 0.1,
-        })
+        .to(
+          '.naresh-portfolio-intro__head__name',
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+          },
+          '-=0.5'
+        )
         .to(
           '.naresh-portfolio-intro__head__title',
           { opacity: 1, y: 0, duration: 0.7 },
-          2
+          '-=0.5'
         )
         .to(
           '.naresh-portfolio-intro__head__desc',
           { opacity: 1, y: 0, duration: 1, ease: 'back.out(1.7)' },
-          '-=.5'
+          '-=0.5'
+        )
+        .to(
+          '.naresh-portfolio-intro__hero',
+          {
+            scale: 1,
+            duration: 1,
+            y: 0,
+            x: 0,
+            ease: Bounce.easeOut,
+          },
+          '-=0.75'
         )
     },
   },
@@ -93,14 +120,22 @@ export default {
 
   &__head {
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     user-select: none;
 
     @media (min-width: 768px) {
+      display: block;
       flex: 1 1 0%;
       text-align: left;
 
       padding-top: 3rem;
       // padding-left: 6rem;
+
+      padding-left: 2rem;
     }
 
     &__callout {
@@ -129,12 +164,38 @@ export default {
         bottom: -20px;
         border-top: 10px solid #2b2929;
       }
+
+      @media (min-width: 768px) {
+        margin: 1.5rem 1.5rem 1.5rem 3rem;
+      }
     }
 
     &__name {
-      font-size: 0;
       line-height: 56px;
       font-weight: 900;
+      font-size: clamp(0rem, 10vw, 3rem);
+      opacity: 0;
+
+      &.medium-dev {
+        display: none;
+
+        @media (min-width: 490px) {
+          display: block;
+        }
+      }
+
+      &.small-dev {
+        display: block;
+        text-align: left;
+
+        @media (min-width: 490px) {
+          display: none;
+        }
+      }
+
+      &--small-dev {
+        line-height: 100%;
+      }
     }
 
     &__title {
@@ -142,6 +203,7 @@ export default {
       line-height: 24px;
       font-weight: 700;
       opacity: 0;
+      margin-top: 1rem;
     }
 
     &__desc {
@@ -152,26 +214,39 @@ export default {
       padding: 0 20px;
       text-align: center;
       opacity: 0;
+      width: 70%;
 
       @media (min-width: 768px) {
         text-align: left;
         width: 16rem;
         padding: 0;
+        width: 100%;
       }
     }
   }
 
   &__hero {
-    margin-top: 2.5rem;
+    margin-top: 4rem;
+    transform: scale(0);
 
-    animation-duration: 1.8s;
-    animation-delay: 2.5s;
-    animation-iteration-count: infinite;
-    animation-name: wobble;
-    display: inline-block;
+    // animation-duration: 1.8s;
+    // animation-delay: 2.5s;
+    // animation-iteration-count: infinite;
+    // animation-name: wobble;
+    // display: inline-block;
 
     @media (min-width: 768px) {
       flex: 1 1 0%;
+      margin-top: 3rem;
+    }
+
+    img {
+      width: 80%;
+      // filter: drop-shadow(5px 5px 10px #b6b6b6);
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
     }
 
     // img {
@@ -185,27 +260,27 @@ export default {
   }
 }
 
-@keyframes wobble {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(12deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
+// @keyframes wobble {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   10% {
+//     transform: rotate(-10deg);
+//   }
+//   20% {
+//     transform: rotate(12deg);
+//   }
+//   30% {
+//     transform: rotate(-10deg);
+//   }
+//   40% {
+//     transform: rotate(9deg);
+//   }
+//   50% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(0deg);
+//   }
+// }
 </style>

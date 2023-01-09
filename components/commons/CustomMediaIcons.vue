@@ -59,7 +59,7 @@ export default {
   width: fit-content;
   z-index: 10;
 
-  padding: 0.5rem 1rem 0.5rem 0;
+  padding: 0.5rem 0;
 
   &.shadow {
     border-top-right-radius: 0.5rem;
