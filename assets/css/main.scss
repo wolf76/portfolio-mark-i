@@ -40,3 +40,19 @@ img {
     line-height: 2.25rem;
     font-weight: 700;
 }
+
+.desktop {
+    display: none;
+  
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+  
+.mobile {
+    display: block;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
