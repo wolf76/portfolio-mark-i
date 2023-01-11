@@ -3,11 +3,19 @@
     <div class="naresh-portfolio-my-work__title title">My Work</div>
     <CustomBorder />
     <div class="naresh-portfolio-my-work__content mt-10">
-      <CustomItem
+      <!-- <CustomItem
         v-for="repo in githubRepos"
         :key="repo.name"
         :title="repo.name"
         :description="repo.description"
+        :tags="repo.tags"
+      /> -->
+
+      <CustomCard
+        v-for="repo in githubRepos"
+        :key="repo.name"
+        :title="repo.name"
+        :content="repo.desc"
         :tags="repo.tags"
       />
     </div>
@@ -17,11 +25,13 @@
 <script>
 import CustomBorder from './commons/CustomBorder.vue'
 import CustomItem from './commons/CustomItem.vue'
+import CustomCard from './commons/CustomCard.vue'
 
 export default {
   components: {
     CustomBorder,
     CustomItem,
+    CustomCard,
   },
 
   data() {
@@ -73,6 +83,10 @@ export default {
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1120px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
