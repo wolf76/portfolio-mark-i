@@ -2,16 +2,34 @@
   <div class="custom-item">
     <div class="custom-item__thumbnail"></div>
     <div class="custom-item__details">
-      <div class="custom-item__details__title">My First Project</div>
+      <div class="custom-item__details__title">{{ title }}</div>
       <div class="custom-item__details__desc">
-        Built with simple VueJS framework. Works just well.
+        {{ description }}
       </div>
+      <p>{{ tags }}</p>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    title: {
+      type: String,
+      default: 'Title',
+      require: true,
+    },
+    description: {
+      type: String,
+      default: 'Description of the repo here',
+      require: true,
+    },
+    tags: {
+      type: Array,
+      require: true,
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

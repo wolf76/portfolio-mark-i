@@ -3,7 +3,13 @@
     <div class="naresh-portfolio-my-work__title title">My Work</div>
     <CustomBorder />
     <div class="naresh-portfolio-my-work__content mt-10">
-      <CustomItem v-for="i in 5" :key="i" />
+      <CustomItem
+        v-for="repo in githubRepos"
+        :key="repo.name"
+        :title="repo.name"
+        :description="repo.description"
+        :tags="repo.tags"
+      />
     </div>
   </div>
 </template>
@@ -16,6 +22,36 @@ export default {
   components: {
     CustomBorder,
     CustomItem,
+  },
+
+  data() {
+    return {
+      githubRepos: Array,
+    }
+  },
+
+  created() {
+    fetch('https://api.github.com/users/wolf76/repos')
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          const tempArray = []
+          result.forEach((element) => {
+            tempArray.push({
+              name: element.name,
+              desc:
+                element.description ||
+                'Temporary description for this repository here, please remove this and add some description on Github repos',
+              tags: element.topics,
+            })
+          })
+
+          this.githubRepos = tempArray
+        },
+        (error) => {
+          console.log('Error: ', error)
+        }
+      )
   },
 }
 </script>
