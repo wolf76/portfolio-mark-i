@@ -47,7 +47,7 @@ export default {
 
   methods: {
     getImage(imgName) {
-      return require(`~/assets/images/${imgName}.svg`)
+      return require(`~/assets/images/icons/${imgName}.svg`)
     },
   },
 }
@@ -78,8 +78,8 @@ export default {
     padding: 0.5rem;
 
     img {
-      height: 1.75rem;
-      width: 1.75rem;
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
 }

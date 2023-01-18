@@ -47,7 +47,7 @@
                     class="custom-accordion__item__body__content__data__company__location flex items-center mt-1 md:mt-0"
                   >
                     <img
-                      src="~/assets/images/map-pin-icon-dark.png"
+                      src="~/assets/images/icons/map-pin-icon-dark.png"
                       alt="map-pin"
                     />
                     <div class="ml-1">{{ item.body.location }}</div>
@@ -61,7 +61,10 @@
                       target="_blank"
                       class="flex items-center"
                     >
-                      <img src="~/assets/images/url-icon-dark.png" alt="url" />
+                      <img
+                        src="~/assets/images/icons/url-icon-dark.png"
+                        alt="url"
+                      />
                       <div class="ml-1">{{ item.body.website }}</div>
                     </a>
                   </div>
