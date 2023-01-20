@@ -6,24 +6,26 @@
     <div class="naresh-portfolio-intro__head">
       <div class="naresh-portfolio-intro__head__callout">Hi! I'm</div>
       <div class="naresh-portfolio-intro__head__name medium-dev">
-        NARESHKUMAR J<span class="text-white">.</span>S
+        NARESHKUMAR J<span :class="[isLightTheme ? 'light' : 'dark']">.</span>S
       </div>
       <div class="naresh-portfolio-intro__head__name small-dev">
         <div class="naresh-portfolio-intro__head__name--small-dev">
           NARESHKUMAR
         </div>
         <div class="naresh-portfolio-intro__head__name--small-dev">
-          J<span class="text-white">.</span>S
+          J<span :class="[isLightTheme ? 'light' : 'dark']">.</span>S
         </div>
       </div>
       <div class="naresh-portfolio-intro__head__title">FRONTEND DEVELOPER</div>
       <div class="naresh-portfolio-intro__head__desc">
-        I'm a Frontend Developer. I create web3 webapps and cool websites.
-        Photography is one of my hobbies.
+        I'm a Frontend Developer, fueled by high energy levels and boundless
+        enthusiasm. Passionate, expressive, goal-oriented and results-driven
+        spirit with a natural ability to entertain and inspire. Have a highly
+        creative nature that’s balanced by a grounded realism.
       </div>
     </div>
     <div class="naresh-portfolio-intro__hero flex justify-center items-center">
-      <img src="~/assets/images/naresh-hero.jpeg" alt="Naresh" />
+      <img src="~/assets/images/hero.png" alt="Naresh" />
     </div>
   </div>
 </template>
@@ -31,6 +33,7 @@
 <script>
 import { gsap, Back, Elastic, Expo, Bounce } from 'gsap'
 import CustomMediaIcons from '@/components/commons/CustomMediaIcons.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Intro',
@@ -41,6 +44,13 @@ export default {
 
   mounted() {
     this.animateIntro()
+  },
+
+  computed: {
+    ...mapGetters(['getTheme']),
+    isLightTheme() {
+      return this.getTheme === 'light'
+    },
   },
 
   methods: {
@@ -101,12 +111,6 @@ export default {
 
   &__media {
     display: none;
-    // position: fixed;
-    // top: 25%;
-
-    // @media (min-width: 1120px) {
-    //   display: none;
-    // }
 
     @media (min-width: 768px) {
       display: flex;
@@ -124,17 +128,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     user-select: none;
 
     @media (min-width: 768px) {
       display: block;
       flex: 1 1 0%;
       text-align: left;
-
-      padding-top: 3rem;
-      // padding-left: 6rem;
-
+      padding-top: 5rem;
       padding-left: 2rem;
     }
 
@@ -145,12 +145,12 @@ export default {
       padding: 10px;
       border-radius: 4px;
       min-height: 50px;
-      border: 1px solid #2b2929;
-      text-shadow: 0 0 1px #000;
-      color: rgba(242, 240, 238, 1);
-      background-color: rgba(43, 41, 41, 1);
+      border: 1px solid var(--accent-color);
+      text-shadow: 0 0 1px var(--accent-color);
+      color: var(--white-color);
+      background-color: var(--accent-color);
       line-height: 24px;
-      font-weight: 500;
+      font-weight: 700;
       margin: 1.5rem;
       transform: scale(0);
 
@@ -162,7 +162,7 @@ export default {
         position: absolute;
         right: 10px;
         bottom: -20px;
-        border-top: 10px solid #2b2929;
+        border-top: 10px solid var(--accent-color);
       }
 
       @media (min-width: 768px) {
@@ -214,13 +214,13 @@ export default {
       padding: 0 20px;
       text-align: center;
       opacity: 0;
-      width: 70%;
 
       @media (min-width: 768px) {
         text-align: left;
         width: 16rem;
         padding: 0;
         width: 100%;
+        width: 90%;
       }
     }
   }
@@ -258,6 +258,14 @@ export default {
     //   }
     // }
   }
+}
+
+.light {
+  color: #ffffff;
+}
+
+.dark {
+  color: #202020;
 }
 
 // @keyframes wobble {

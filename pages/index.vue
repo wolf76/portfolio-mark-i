@@ -4,11 +4,12 @@
       <CustomMediaIcons />
     </div>
     <div class="naresh-portfolio-app__main p-2 md:p-8">
-      APP
+      <Header />
       <Intro />
       <About />
-      <MyWork />
       <Experience />
+      <MyWork />
+      <Testimonials />
       <Contact />
     </div>
 
@@ -18,11 +19,15 @@
 
 <script>
 import CustomMediaIcons from '@/components/commons/CustomMediaIcons.vue'
+import Header from '@/components/Header.vue'
+import Testimonials from '@/components/Testimonials.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     CustomMediaIcons,
+    Header,
+    Testimonials,
   },
 }
 </script>
@@ -46,10 +51,10 @@ export default {
   }
 
   &__main {
-    background: #fff;
+    background: var(--white-contrast);
     max-width: 70rem;
     margin: 0 auto;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
 
     @media (min-width: 1120px) {

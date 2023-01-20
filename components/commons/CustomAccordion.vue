@@ -47,7 +47,13 @@
                     class="custom-accordion__item__body__content__data__company__location flex items-center mt-1 md:mt-0"
                   >
                     <img
+                      v-if="isLightTheme"
                       src="~/assets/images/icons/map-pin-icon-dark.png"
+                      alt="map-pin"
+                    />
+                    <img
+                      v-else
+                      src="~/assets/images/icons/map-pin-icon-light.png"
                       alt="map-pin"
                     />
                     <div class="ml-1">{{ item.body.location }}</div>
@@ -62,7 +68,13 @@
                       class="flex items-center"
                     >
                       <img
+                        v-if="isLightTheme"
                         src="~/assets/images/icons/url-icon-dark.png"
+                        alt="url"
+                      />
+                      <img
+                        v-else
+                        src="~/assets/images/icons/url-icon-light.png"
                         alt="url"
                       />
                       <div class="ml-1">{{ item.body.website }}</div>
@@ -95,6 +107,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import DropdownIcon from './DropdownIcon.vue'
 
 export default {
@@ -114,9 +127,19 @@ export default {
   },
 
   computed: {
+    ...mapGetters(['getTheme']),
+
     customItems() {
       this.accordionItems = [...this.items]
       return this.accordionItems
+    },
+
+    isLightTheme() {
+      return this.getTheme === 'light'
+    },
+
+    setImageTheme() {
+      return this.isLightTheme ? 'dark' : 'light'
     },
   },
 
@@ -143,7 +166,7 @@ export default {
     },
 
     getImage(imgName) {
-      return require(`~/assets/images/${imgName}`)
+      return require(`~/assets/images/${imgName}-${this.setImageTheme}.png`)
     },
   },
 }
@@ -167,23 +190,23 @@ export default {
 
   &__item {
     &__header {
-      background-color: #f9a826;
+      background-color: var(--accent-color);
       cursor: pointer;
       position: relative;
       padding: 15px 20px;
       border-radius: 5px;
-      color: #fff;
+      color: var(--white-color);
       font-weight: 700;
 
       &.active {
-        background-color: #f9a826;
+        background-color: var(--accent-color);
       }
     }
 
     &__body {
       height: 10px;
       overflow: hidden;
-      color: #fff;
+      color: var(--white-contrast);
 
       transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
 
@@ -192,8 +215,8 @@ export default {
       }
 
       &__content {
-        background-color: #e6e6e6;
-        color: #505051;
+        background-color: var(--accordion-item-background);
+        color: var(--secondary-color);
         border-radius: 5px;
         padding: 15px 20px;
         font-size: 14px;
@@ -228,9 +251,9 @@ export default {
             .tag-bubble {
               padding: 5px 15px;
               border-radius: 20px;
-              background-color: #8a8a8a;
-              margin: 0 2px 2px;
-              color: #fff;
+              background-color: var(--tag-bubble);
+              margin: 2px;
+              color: var(--white-color);
               font-size: 12px;
             }
           }

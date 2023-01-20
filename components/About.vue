@@ -161,7 +161,7 @@ export default {
 .naresh-portfolio-about {
   &__content {
     border-radius: 8px;
-    background: #f2f0ee;
+    background: var(--secondary-color-light-two);
 
     @media (min-width: 1024px) {
       height: 600px;
@@ -222,11 +222,11 @@ export default {
 
       .resume-button {
         button {
-          background: #f9a826;
-          color: #fff;
+          background: var(--accent-color);
+          color: var(--white-color);
 
           &:hover {
-            background: #f89c07;
+            background: var(--accent-color-dark);
           }
         }
       }

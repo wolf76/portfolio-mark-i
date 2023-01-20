@@ -2,57 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --accent-color: #f9a826;
+  --accent-color-dark: #f89c07;
+  --secondary-color: #505051;
+  --secondary-color-dark: #8a8a8a;
+  --secondary-color-light: #e6e6e6;
+  --secondary-color-light-two: #f2f0ee;
+  --black-contrast: #000000;
+  --white-contrast: #ffffff;
+  --white-color: #ffffff;
+
+  --cursor-color: #000000;
+  --accordion-item-background: var(--secondary-color-light);
+  --tag-bubble: var(--secondary-color-dark);
+}
+
+[data-theme='dark'] {
+  --accent-color: #f9a826;
+  --accent-color-dark: #f89c07;
+  --secondary-color: #ffffff;
+  --secondary-color-dark: #8a8a8a;
+  --secondary-color-light: #e6e6e6;
+  --secondary-color-light-two: #282828;
+  --black-contrast: #000000;
+  --white-contrast: #202020;
+
+  --cursor-color: var(--secondary-color);
+  --accordion-item-background: var(--secondary-color-light-two);
+  --tag-bubble: #505051;
+}
+
 html {
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
-    &::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
-    }
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
 
-    &::-webkit-scrollbar-track {
-        -webkit-box-shadow: none;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-    }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        background: #f9a826;
-    }
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: var(--accent-color);
+  }
 }
 
 body {
-    color: #505051;
-    background: #f2f0ee;
+  color: var(--secondary-color);
+  background: var(--secondary-color-light-two);
+
+  transition: 0.3s;
 }
 
 img {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
 }
 
 .desktop {
-    display: none;
-  
-    @media (min-width: 768px) {
-        display: block;
-    }
-}
-  
-.mobile {
-    display: block;
+  display: none;
 
-    @media (min-width: 768px) {
-        display: none;
-    }
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.mobile {
+  display: block;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

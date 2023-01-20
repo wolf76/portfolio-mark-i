@@ -138,7 +138,7 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background: #fff;
+      background: var(--white-contrast);
 
       &__avatar {
         margin: 2rem 0;
@@ -154,6 +154,7 @@ export default {
         margin-bottom: 2rem;
         font-weight: 300;
         font-style: italic;
+        padding: 0 0.25rem;
 
         @media (min-width: 768px) {
           font-size: 1.375rem;
@@ -189,12 +190,12 @@ export default {
       height: 1rem;
       width: 1rem;
       border-radius: 50%;
-      background: #f2f0ee;
+      background: var(--secondary-color-light-two);
       margin: 0 0.5rem;
       cursor: pointer;
 
       &.active-slide {
-        background: #f9a826;
+        background: var(--accent-color);
       }
     }
   }

@@ -39,7 +39,7 @@ export default {
               'Figma',
               'Matic Design System',
             ],
-            image: 'polygon-logo-black.svg',
+            image: 'polygon-logo',
           },
           period: '2020 - Present',
           active: true,
@@ -53,7 +53,7 @@ export default {
             description:
               'Worked at Francium Tech for almost 2 years and worked on multiple projects there for a Singapore Client (MoneySmart), building their credit card forms and multi lingual blog sites.',
             tags: ['VueJS', 'Vuex', 'CSS', 'Bootstramp', 'NuxtJS', 'Zeplin'],
-            image: 'francium-logo.png',
+            image: 'francium-logo',
           },
           period: '2018 - 2020',
           active: false,

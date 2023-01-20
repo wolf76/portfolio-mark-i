@@ -28,7 +28,7 @@ export default {
     position: absolute;
     width: 10px;
     height: 2px;
-    background: #fff;
+    background: var(--white-color);
     border-radius: 40px;
     transition: 0.5s;
 

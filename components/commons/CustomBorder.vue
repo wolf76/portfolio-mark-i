@@ -5,6 +5,6 @@
 <style lang="scss" scoped>
 .custom-border {
   height: 0.2rem;
-  background: linear-gradient(45deg, #f9a826, transparent);
+  background: linear-gradient(45deg, var(--accent-color), transparent);
 }
 </style>

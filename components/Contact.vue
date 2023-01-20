@@ -1,15 +1,7 @@
 <template>
-  <div class="naresh-portfolio-contact">
+  <div class="naresh-portfolio-contact mt-14">
     <div
-      class="
-        naresh-portfolio-contact__container
-        max-w-xs
-        m-auto
-        mt-12
-        mb-12
-        md:mt-32 md:mb-18
-        text-center
-      "
+      class="naresh-portfolio-contact__container max-w-xs m-auto mt-12 md:mt-32 text-center"
     >
       <div class="naresh-portfolio-contact__text capitalize font-bold text-lg">
         Stay Connected
@@ -40,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .naresh-portfolio-contact {
   &__place {
-    color: #718096;
+    color: var(--accent-color);
   }
 }
 </style>

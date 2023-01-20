@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   data() {
     return {
@@ -45,9 +47,17 @@ export default {
     },
   },
 
+  computed: {
+    ...mapGetters(['getTheme']),
+
+    setImageTheme() {
+      return this.getTheme === 'light' ? 'dark' : 'light'
+    },
+  },
+
   methods: {
     getImage(imgName) {
-      return require(`~/assets/images/icons/${imgName}.svg`)
+      return require(`~/assets/images/icons/${imgName}-${this.setImageTheme}.svg`)
     },
   },
 }
@@ -55,7 +65,7 @@ export default {
 
 <style lang="scss" scoped>
 .custom-media-icons {
-  background: #fff;
+  background: var(--white-contrast);
   width: fit-content;
   z-index: 10;
 
