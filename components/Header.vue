@@ -4,29 +4,32 @@
       <img v-if="isLight" src="~/assets/images/nk-logo-dark.png" alt="NK" />
       <img v-else src="~/assets/images/nk-logo-light.png" alt="NK" />
     </div>
-    <div class="naresh-portfolio-header__menu flex items-center cursor-pointer">
-      <a class="desktop" href="mailto:iamnarey@gmail.com">
-        <div
-          class="naresh-portfolio-header__menu__mail flex items-center mr-20"
-        >
-          <div class="naresh-portfolio-header__menu__mail__icon mr-1">
-            <img
-              v-if="isLight"
-              src="~/assets/images/icons/envelope-dark.png"
-              alt="Mail"
-            />
-            <img
-              v-else
-              src="~/assets/images/icons/envelope-light.png"
-              alt="Mail"
-            />
+    <div class="naresh-portfolio-header__menu flex items-center">
+      <div class="mr-20">
+        <a class="desktop" href="mailto:iamnarey@gmail.com">
+          <div class="naresh-portfolio-header__menu__mail flex items-center">
+            <div class="naresh-portfolio-header__menu__mail__icon mr-1">
+              <img
+                v-if="isLight"
+                src="~/assets/images/icons/envelope-dark.png"
+                alt="Mail"
+              />
+              <img
+                v-else
+                src="~/assets/images/icons/envelope-light.png"
+                alt="Mail"
+              />
+            </div>
+            <div class="naresh-portfolio-header__menu__mail__text">
+              iamnarey@gmail.com
+            </div>
           </div>
-          <div class="naresh-portfolio-header__menu__mail__text">
-            iamnarey@gmail.com
-          </div>
-        </div>
-      </a>
-      <div class="naresh-portfolio-header__menu__theme" @click="toggleTheme">
+        </a>
+      </div>
+      <div
+        class="naresh-portfolio-header__menu__theme cursor-pointer"
+        @click="toggleTheme"
+      >
         <img
           v-if="isLight"
           src="~/assets/images/icons/moon.png"
