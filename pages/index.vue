@@ -8,7 +8,7 @@
       <Intro />
       <About />
       <Experience />
-      <MyWork />
+      <Projects />
       <Testimonials />
       <Contact />
     </div>
@@ -19,15 +19,11 @@
 
 <script>
 import CustomMediaIcons from '@/components/commons/CustomMediaIcons.vue'
-import Header from '@/components/Header.vue'
-import Testimonials from '@/components/Testimonials.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     CustomMediaIcons,
-    Header,
-    Testimonials,
   },
 }
 </script>
@@ -36,12 +32,6 @@ export default {
 .naresh-portfolio-app {
   &__media {
     display: none;
-
-    // @media (min-width: 1120px) {
-    //   display: block;
-    //   position: fixed;
-    //   top: 25%;
-    // }
 
     @media (min-width: 1272px) {
       display: block;
