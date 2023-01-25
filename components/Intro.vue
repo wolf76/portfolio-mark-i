@@ -23,6 +23,19 @@
         spirit with a natural ability to entertain and inspire. Have a highly
         creative nature that’s balanced by a grounded realism.
       </div>
+      <div class="naresh-portfolio-intro__head__resume justify-end">
+        <a
+          href="https://drive.google.com/uc?export=download&id=1VuuQe27rGgG-m8ezkF6JyMmfT1yg8X76"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <div
+            class="naresh-portfolio-intro__head__resume__inner flex justify-center items-center"
+          >
+            RESUME
+          </div>
+        </a>
+      </div>
     </div>
     <div class="naresh-portfolio-intro__hero flex justify-center items-center">
       <img src="~/assets/images/hero.png" alt="Naresh" />
@@ -134,7 +147,7 @@ export default {
       display: block;
       flex: 1 1 0%;
       text-align: left;
-      padding-top: 5rem;
+      padding-top: 3rem;
       padding-left: 2rem;
     }
 
@@ -223,17 +236,32 @@ export default {
         width: 90%;
       }
     }
+
+    &__resume {
+      display: none;
+
+      @media (min-width: 768px) {
+        margin-top: 2rem;
+        margin-right: 5rem;
+        display: flex;
+      }
+
+      &__inner {
+        background: var(--accent-color);
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        color: var(--white-color);
+        font-weight: 600;
+        font-size: 0.875rem;
+        animation: 1.5s ease 0s infinite beat;
+      }
+    }
   }
 
   &__hero {
     margin-top: 4rem;
     transform: scale(0);
-
-    // animation-duration: 1.8s;
-    // animation-delay: 2.5s;
-    // animation-iteration-count: infinite;
-    // animation-name: wobble;
-    // display: inline-block;
 
     @media (min-width: 768px) {
       flex: 1 1 0%;
@@ -260,6 +288,21 @@ export default {
   }
 }
 
+@keyframes beat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1, 1);
+    background: #fab951;
+  }
+
+  30%,
+  80% {
+    transform: scale(0.92, 0.95);
+    background: var(--accent-color);
+  }
+}
+
 .light {
   color: #ffffff;
 }
@@ -267,28 +310,4 @@ export default {
 .dark {
   color: #202020;
 }
-
-// @keyframes wobble {
-//   0% {
-//     transform: rotate(0deg);
-//   }
-//   10% {
-//     transform: rotate(-10deg);
-//   }
-//   20% {
-//     transform: rotate(12deg);
-//   }
-//   30% {
-//     transform: rotate(-10deg);
-//   }
-//   40% {
-//     transform: rotate(9deg);
-//   }
-//   50% {
-//     transform: rotate(0deg);
-//   }
-//   100% {
-//     transform: rotate(0deg);
-//   }
-// }
 </style>

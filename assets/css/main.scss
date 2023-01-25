@@ -17,6 +17,7 @@
   --accordion-item-background: var(--secondary-color-light);
   --tag-bubble: var(--secondary-color-dark);
   --card-color: var(--secondary-color);
+  --footer-color: #8a8a8a;
 }
 
 [data-theme='dark'] {
@@ -33,6 +34,7 @@
   --accordion-item-background: var(--secondary-color-light-two);
   --tag-bubble: #505051;
   --card-color: #282828;
+  --footer-color: #505051;
 }
 
 html {

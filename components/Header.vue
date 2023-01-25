@@ -1,11 +1,37 @@
 <template>
-  <div class="naresh-portfolio-header flex justify-between items-start">
+  <div class="naresh-portfolio-header flex justify-between items-center">
     <div class="naresh-portfolio-header__logo">
       <img v-if="isLight" src="~/assets/images/nk-logo-dark.png" alt="NK" />
       <img v-else src="~/assets/images/nk-logo-light.png" alt="NK" />
     </div>
     <div class="naresh-portfolio-header__menu flex items-center">
-      <div class="mr-20">
+      <div class="naresh-portfolio-header__menu__item mr-8">
+        <a
+          href="https://drive.google.com/uc?export=download&id=1VuuQe27rGgG-m8ezkF6JyMmfT1yg8X76"
+          rel="noopener noreferrer"
+          target="_blank"
+          class="desktop"
+        >
+          <div class="naresh-portfolio-header__menu__resume flex items-center">
+            <div class="naresh-portfolio-header__menu__resume__icon mr-1">
+              <img
+                v-if="isLight"
+                src="~/assets/images/icons/resume-icon-dark.png"
+                alt=""
+              />
+              <img
+                v-else
+                src="~/assets/images/icons/resume-icon-light.png"
+                alt=""
+              />
+            </div>
+            <div class="naresh-portfolio-header__menu__resume__text">
+              Resume
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="naresh-portfolio-header__menu__item mr-16">
         <a class="desktop" href="mailto:iamnarey@gmail.com">
           <div class="naresh-portfolio-header__menu__mail flex items-center">
             <div class="naresh-portfolio-header__menu__mail__icon mr-1">
@@ -101,9 +127,31 @@ export default {
   }
 
   &__menu {
+    &__item {
+      border-radius: 8px;
+      padding: 0.5rem;
+      transition: 0.5s ease;
+
+      &:hover {
+        background: #fab951;
+        color: var(--white-color);
+      }
+    }
+
+    &__resume {
+      &__icon {
+        width: 24px;
+      }
+
+      &__text {
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+    }
+
     &__mail {
       &__icon {
-        width: 20px;
+        width: 24px;
       }
 
       &__text {
