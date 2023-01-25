@@ -13,7 +13,7 @@
       <Contact />
     </div>
 
-    <div v-if="false" class="naresh-portfolio-app__footer py-8 px-8"></div>
+    <Footer />
   </div>
 </template>
 
@@ -46,16 +46,12 @@ export default {
     margin: 0 auto;
     border-radius: 1rem;
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 25%);
+    margin-bottom: 2rem;
 
     @media (min-width: 1120px) {
       margin-top: 4rem;
       margin-bottom: 4rem;
     }
-  }
-
-  &__footer {
-    max-width: 70rem;
-    margin: 0 auto;
   }
 }
 </style>
