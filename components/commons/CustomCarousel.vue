@@ -154,7 +154,7 @@ export default {
         margin-bottom: 2rem;
         font-weight: 300;
         font-style: italic;
-        padding: 0 0.25rem;
+        padding: 0 1rem;
 
         @media (min-width: 768px) {
           font-size: 1.375rem;

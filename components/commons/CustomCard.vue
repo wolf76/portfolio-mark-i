@@ -46,6 +46,7 @@ export default {
   border-radius: 8px;
   height: 100%;
   color: var(--white-color);
+  transition: all 0.5s ease;
 
   display: flex;
   flex-direction: column;
@@ -53,6 +54,10 @@ export default {
 
   @media (min-width: 768px) {
     max-width: 450px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__container {
