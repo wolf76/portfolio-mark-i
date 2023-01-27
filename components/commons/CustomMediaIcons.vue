@@ -88,8 +88,8 @@ export default {
     padding: 0.5rem;
 
     img {
-      height: 1.5rem;
-      width: 1.5rem;
+      height: 1.75rem;
+      width: 1.75rem;
     }
   }
 }
