@@ -9,6 +9,7 @@
       <About />
       <Experience />
       <Projects />
+      <Skills />
       <Testimonials />
       <Contact />
     </div>
