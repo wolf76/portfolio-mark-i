@@ -90,6 +90,11 @@ export default {
     img {
       height: 1.75rem;
       width: 1.75rem;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }
