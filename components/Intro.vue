@@ -23,19 +23,6 @@
         spirit with a natural ability to entertain and inspire. Have a highly
         creative nature that’s balanced by a grounded realism.
       </div>
-      <div class="naresh-portfolio-intro__head__resume justify-end">
-        <a
-          href="https://drive.google.com/uc?export=download&id=1VuuQe27rGgG-m8ezkF6JyMmfT1yg8X76"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <div
-            class="naresh-portfolio-intro__head__resume__inner flex justify-center items-center"
-          >
-            RESUME
-          </div>
-        </a>
-      </div>
     </div>
     <div class="naresh-portfolio-intro__hero flex justify-center items-center">
       <img src="~/assets/images/hero.png" alt="Naresh" />
@@ -186,8 +173,16 @@ export default {
     &__name {
       line-height: 56px;
       font-weight: 900;
-      font-size: clamp(0rem, 10vw, 3rem);
+      font-size: 2.25rem;
       opacity: 0;
+
+      @media (min-width: 378px) {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: 920px) {
+        font-size: 3rem;
+      }
 
       &.medium-dev {
         display: none;
@@ -236,27 +231,6 @@ export default {
         width: 90%;
       }
     }
-
-    &__resume {
-      display: none;
-
-      @media (min-width: 768px) {
-        margin-top: 2rem;
-        margin-right: 5rem;
-        display: flex;
-      }
-
-      &__inner {
-        background: var(--accent-color);
-        height: 5rem;
-        width: 5rem;
-        border-radius: 50%;
-        color: var(--white-color);
-        font-weight: 600;
-        font-size: 0.875rem;
-        animation: 1.5s ease 0s infinite beat;
-      }
-    }
   }
 
   &__hero {
@@ -275,21 +249,6 @@ export default {
         width: 100%;
       }
     }
-  }
-}
-
-@keyframes beat {
-  0%,
-  50%,
-  100% {
-    transform: scale(1, 1);
-    background: #fab951;
-  }
-
-  30%,
-  80% {
-    transform: scale(0.92, 0.95);
-    background: var(--accent-color);
   }
 }
 
