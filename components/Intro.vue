@@ -270,21 +270,11 @@ export default {
 
     img {
       width: 80%;
-      // filter: drop-shadow(5px 5px 10px #b6b6b6);
 
       @media (min-width: 768px) {
         width: 100%;
       }
     }
-
-    // img {
-    //   width: 10rem;
-    //   margin: 0 auto;
-
-    //   @media (min-width: 768px) {
-    //     width: 20rem;
-    //   }
-    // }
   }
 }
 
