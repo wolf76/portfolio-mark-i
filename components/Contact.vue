@@ -1,5 +1,5 @@
 <template>
-  <div class="naresh-portfolio-contact mt-14">
+  <div class="naresh-portfolio-contact mt-14 md:mt-20">
     <div
       class="naresh-portfolio-contact__container max-w-xs m-auto mt-32 text-center"
     >

@@ -1,5 +1,5 @@
 <template>
-  <div class="naresh-portfolio-experience mt-14">
+  <div class="naresh-portfolio-experience mt-14 md:mt-20">
     <div class="naresh-portfolio-experience__title title">Experience</div>
     <CustomBorder />
     <div class="mt-8">
