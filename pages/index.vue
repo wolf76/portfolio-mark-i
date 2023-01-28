@@ -1,5 +1,6 @@
 <template>
   <div class="naresh-portfolio-app">
+    <CustomBlobCursor class="desktop" />
     <div class="naresh-portfolio-app__media">
       <CustomMediaIcons />
     </div>
@@ -20,11 +21,13 @@
 
 <script>
 import CustomMediaIcons from '@/components/commons/CustomMediaIcons.vue'
+import CustomBlobCursor from '~/components/commons/CustomBlobCursor.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     CustomMediaIcons,
+    CustomBlobCursor,
   },
 }
 </script>
