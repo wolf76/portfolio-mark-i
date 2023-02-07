@@ -66,10 +66,16 @@ export default {
       margin: 0.5rem;
 
       img {
-        height: 100px;
-        width: 100px;
-        padding: 1rem;
+        height: 60px;
+        width: 60px;
+        padding: 0.5rem;
         transition: all 0.5s ease;
+
+        @media (min-width: 768px) {
+          height: 100px;
+          width: 100px;
+          padding: 1rem;
+        }
 
         &:hover {
           transform: scale(1.1) rotate(15deg);
@@ -82,17 +88,15 @@ export default {
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted var(--secondary-color);
-  transition: 1s ease;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 100px;
   background-color: var(--secondary-color);
   color: var(--secondary-color-light-two);
   text-align: center;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 5px 0;
 
   /* Position the tooltip */
@@ -100,12 +104,12 @@ export default {
   z-index: 1;
   bottom: 110%;
   left: 50%;
-  margin-left: -60px;
+  margin-left: -50px;
 
   &::after {
-    content: ' ';
+    content: '';
     position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
+    top: 100%;
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
