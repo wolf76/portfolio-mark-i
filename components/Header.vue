@@ -78,7 +78,9 @@ export default {
   },
 
   mounted() {
-    this.isLightTheme = localStorage.getItem('appTheme') === 'light'
+    this.isLightTheme =
+      localStorage.getItem('appTheme') === 'light' ||
+      localStorage.getItem('appTheme') === null
     this.setAppTheme()
   },
 
