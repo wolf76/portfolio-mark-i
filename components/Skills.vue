@@ -26,19 +26,19 @@ export default {
   data() {
     return {
       skills: [
-        'html-5',
-        'css-3',
+        'html 5',
+        'css 3',
         'js',
         'vue',
         'nuxt',
         'sass',
         'bootstrap',
+        'git',
         'figma',
         'vscode',
-        'git',
         'photoshop',
         'responsive',
-        'camera',
+        'photography',
         'gaming',
       ],
     }
@@ -98,6 +98,8 @@ export default {
   text-align: center;
   border-radius: 8px;
   padding: 5px 0;
+  font-size: 14px;
+  line-height: 18px;
 
   /* Position the tooltip */
   position: absolute;
