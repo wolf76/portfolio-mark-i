@@ -20,7 +20,7 @@
       <div class="naresh-portfolio-intro__head__desc">
         I'm a Frontend Developer, fueled by high energy levels and boundless
         enthusiasm. Passionate, expressive, goal-oriented and results-driven
-        spirit with a natural ability to entertain and inspire. Have a highly
+        spirit with a natural ability to entertain and inspire. I have a highly
         creative nature that’s balanced by a grounded realism.
       </div>
     </div>

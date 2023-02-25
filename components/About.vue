@@ -57,24 +57,23 @@
         <div class="text-1 py-6">
           <div class="font-semibold">DESIGN</div>
           <div class="text-sm pt-2">
-            I value simple content structure, clean design patterns, and
-            thoughtful interactions. Love playing with the colors, but also
-            personally like things dark.
+            I value minimalistic structures and thoughtful interactions. I love
+            playing with colors, but I prefer things dark ;).
           </div>
         </div>
         <div class="text-2 py-6">
           <div class="font-semibold">FRONTEND</div>
           <div class="text-sm pt-2">
-            I build and code things from scratch, and enjoy bringing ideas to
-            life in the browser. Deeply into bringing my design thoughts on the
-            UI.
+            I develop things from scratch, and deeply enjoy transforming my
+            design thoughts into reality.
           </div>
         </div>
         <div class="text-3 py-6">
           <div class="font-semibold">WEB3</div>
           <div class="text-sm pt-2">
-            Have 2+ years working with web3 dApps and other applications. Built
-            things like NFT market place, crypto wallet and bridges.
+            I have 2+ years of experience working with web3 dApps and other
+            applications. Built things like NFT market place, crypto wallet and
+            bridges.
           </div>
         </div>
 
