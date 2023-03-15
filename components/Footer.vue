@@ -39,6 +39,7 @@ export default {
 
   img {
     transform: rotate(180deg);
+    width: 100%;
   }
 
   &__body {
