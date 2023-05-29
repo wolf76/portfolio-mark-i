@@ -94,3 +94,7 @@ img {
     display: none;
   }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: var(--accent-color) !important;
+}

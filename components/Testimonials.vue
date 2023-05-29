@@ -5,20 +5,21 @@
     <div class="naresh-portfolio-testimonials__desc">
       People I've worked with have said some nice things...
     </div>
+
     <div class="naresh-portfolio-testimonials__carousel">
-      <CustomCarousel :carouselSlides="testimonials" />
+      <CustomHorizontalScroll :carouselSlides="testimonials" />
     </div>
   </div>
 </template>
 
 <script>
 import CustomBorder from './commons/CustomBorder.vue'
-import CustomCarousel from './commons/CustomCarousel.vue'
+import CustomHorizontalScroll from './commons/CustomHorizontalScroll.vue'
 
 export default {
   components: {
     CustomBorder,
-    CustomCarousel,
+    CustomHorizontalScroll,
   },
 
   data() {
