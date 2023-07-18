@@ -7,7 +7,7 @@
     <div class="naresh-portfolio-header__menu flex items-center">
       <div class="naresh-portfolio-header__menu__item mr-8">
         <a
-          href="~/assets/pdf/NareshResume.pdf"
+          href="/pdf/NareshResume.pdf"
           download
           rel="noopener noreferrer"
           class="desktop"

@@ -78,11 +78,7 @@
         </div>
 
         <div class="resume-button pt-6">
-          <a
-            href="~/assets/pdf/NareshResume.pdf"
-            download
-            rel="noopener noreferrer"
-          >
+          <a href="/pdf/NareshResume.pdf" download rel="noopener noreferrer">
             <button
               class="font-bold py-2 px-4 rounded inline-flex items-center"
             >
