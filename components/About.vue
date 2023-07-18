@@ -79,9 +79,9 @@
 
         <div class="resume-button pt-6">
           <a
-            href="https://drive.google.com/uc?export=download&id=1VuuQe27rGgG-m8ezkF6JyMmfT1yg8X76"
+            href="~/assets/pdf/NareshResume.pdf"
+            download
             rel="noopener noreferrer"
-            target="_blank"
           >
             <button
               class="font-bold py-2 px-4 rounded inline-flex items-center"

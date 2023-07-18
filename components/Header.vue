@@ -7,9 +7,9 @@
     <div class="naresh-portfolio-header__menu flex items-center">
       <div class="naresh-portfolio-header__menu__item mr-8">
         <a
-          href="https://drive.google.com/uc?export=download&id=1VuuQe27rGgG-m8ezkF6JyMmfT1yg8X76"
+          href="~/assets/pdf/NareshResume.pdf"
+          download
           rel="noopener noreferrer"
-          target="_blank"
           class="desktop"
         >
           <div class="naresh-portfolio-header__menu__resume flex items-center">
